@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Playfair Display", serif;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  display: block;
+}
+body {
+  font-size: 18px;
+  color: #333;
+  font-family: "Playfair Display", serif;
+}
+
+/*초기 세탕값*/
+.container {
+  width: 64%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mtb100 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*header*/
+#header {
+  height: 100px;
+}
+
+#header > a {
+  float: left;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 100px;
+  font-style: italic;
+}
+#header ul {
+  float: right;
+  line-height: 100px;
+}
+#header ul li {
+  float: left;
+  margin-left: 40px;
+}
+#header ul li:last-child {
+  border: 1px solid #999;
+  font-style: 14px;
+  height: 32px;
+  line-height: 32px; /*메뉴 행간=100*/
+  margin: 32px 0; /*100-32-2=64*/
+  margin-left: 60px;
+  padding: 0 15px;
+}
+
+#header ul li:not(.btn) {
+  font-weight: 900;
+}
+
+/*main*/
+#main > p {
+  font-style: 20px;
+  line-height: 40px;
+}
+.bg {
+  width: 100%;
+  height: 800px;
+  background-image: url("../HTML5+CSS3 디테일 심화/디테일 03~04강/Detail03/작업파일/img/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed; /* 고정되는 배경화면*/
+}
+
+/*info*/
+#info {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+#info p {
+  width: 50%;
+  float: left;
+}
+/*형태구조선택자 - 부모내의 형제관계 태그로 구분*/
+#info p:nth-of-type(2) {
+  width: 40%;
+  float: right;
+}
+
+/*문자선택자*/
+#info p:nth-of-type(1)::first-letter {
+  font-size: 70px;
+  float: left;
+  text-transform: uppercase; /*글지형태 변형 속성*/
+  padding-right: 10px;
+}
+
+/*가상선택자*/
+#info p:nth-of-type(2)::after {
+  content: "h22sang";
+  font-size: 40px;
+  display: block;
+  margin-top: 120px;
+  float: right;
+  font-family: "Ephesis", cursive;
+}
