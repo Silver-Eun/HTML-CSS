@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>색상표현을 이용한 스타일링</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      div {
+        width: 30%;
+        height: 300px;
+        line-height: 300px;
+        float: left;
+        margin: 1%;
+        text-align: center;
+      }
+      .gr_tobottom {
+        /*background 속성을 이용하여 그라디언트를 부여(선형그라데이션)*/
+        background: linear-gradient(to bottom, #ffb8b8, #8f6be4);
+      }
+      .gr_totop {
+        /*background 속성을 이용하여 그라디언트를 부여(선형그라데이션)*/
+        background: linear-gradient(to top, #ffb8b8, #8f6be4);
+      }
+      .gr_toleft {
+        /*background 속성을 이용하여 그라디언트를 부여(선형그라데이션)*/
+        background: linear-gradient(to left, #ffb8b8 50%, #8f6be4 50%);
+        /*색상이 나타나는 %도 분배가능*/
+      }
+      .gr_toright {
+        /*background 속성을 이용하여 그라디언트를 부여(선형그라데이션)*/
+        background: linear-gradient(to right, #ffb8b8, #8f6be4, #f00);
+      }
+      .gr_ndeg {
+        /*background 속성을 이용하여 그라디언트를 부여(선형그라데이션)*/
+        background: linear-gradient(45deg, #ffb8b8, #8f6be4);
+      }
+      .gr_ra {
+        /*background 속성을 이용하여 그라디언트를 부여(선형그라데이션)*/
+        background: radial-gradient(#ffb8b8, #8f6be4);
+      }
+
+      /*박스그림자*/
+      .boxs1 {
+        box-shadow: 2px 2px 5px #333; /*x축, y축 흐림도 색상*/
+      }
+      .boxs2 {
+        box-shadow: 2px 2px 5px 10px #333; /*x축, y축 흐림도 크기 색상*/
+      }
+      .boxs3 {
+        box-shadow: inset 2px 2px 10px #333; /* 안쪽그림자 - 요소안으로~ */
+      }
+      .boxs4 {
+        box-shadow: 5px -5px 5px #ffb8b8, -5px 5px 5px #8f6be4; /*다중그림자 부여 쉼표로 구분*/
+      }
+      /*블러효과 - 가우시안 블러*/
+      .fill_b {
+        filter: blur(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>웹 색상표현</h1>
+    <p>단어(black, pinkn white...),hex(#ff0000), rgb,hsl,opacity,box-shadow,text-shadow</p>
+
+    <!--그라데이션 설정 및 방향-->
+    <div class="gr_tobottom boxs1">위에서 아래로(기본)</div>
+    <div class="gr_totop boxs2">아래에서 위로</div>
+    <div class="gr_toleft bosx3">오른쪽에서 왼쪽으로</div>
+    <div class="gr_toright boxs4">왼쪽에서 오른쪽으로</div>
+    <div class="gr_ndeg">원하는 각도의 방향 설정</div>
+
+    <div class="gr_ra fill_b">원형 그라디언트</div>
+  </body>
+</html>
