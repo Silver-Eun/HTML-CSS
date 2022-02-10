@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+/*font-family: 'Lato', sans-serif;*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  display: block;
+}
+body {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  background: url("../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail05/작업파일/img/txtbg.png") right top no-repeat, linear-gradient(to bottom, #c66252, #904d42);
+}
+
+header {
+  width: auto;
+  overflow: hidden;
+  padding: 50px;
+}
+
+header > a {
+  float: left;
+  line-height: 25px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+header > img {
+  float: right;
+}
+
+section {
+  width: 73%;
+  margin: 100px auto;
+  height: 1200px;
+  position: relative; /*부모기준 - bg2*/
+}
+.bg {
+  width: 455px;
+  height: 683px;
+  float: left;
+  box-shadow: 100px 100px 80px 0 rgba(0, 0, 0, 0.5);
+  position: relative; /*부모기준 - 오버레이*/
+}
+.bg span {
+  width: 455px;
+  height: 683px;
+  display: block; /*글자는 폭설정X*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+  opacity: 0; /*동작을 부여: 미리 사라지게*/
+  transition: all ease-in 0.4s;
+}
+
+.info {
+  width: 500px;
+  height: 760px;
+  float: right;
+  position: relative; /*부모기준 - 글자요소들*/
+  z-index: 2;
+}
+.info h1 {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  font-weight: 800;
+  font-size: 28px;
+}
+.info .text {
+  position: absolute;
+  bottom: 0;
+  font-size: 35px;
+}
+
+.info .text p {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  line-height: 30px;
+  margin-top: 50px;
+}
+.bg2 {
+  width: 688px;
+  height: 435px;
+  box-shadow: 100px 100px 80px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 30px;
+  left: 300px;
+  z-index: 0;
+}
+.bg2 span {
+  width: 688px;
+  height: 435px;
+  display: block; /*글자는 폭설정X*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+  opacity: 0; /*동작을 부여: 미리 사라지게*/
+  transition: all ease-in 0.4s;
+}
+
+footer {
+  width: auto;
+  padding: 50px 0;
+  overflow: hidden;
+  background-color: #7a3f35;
+  text-align: center;
+}
+
+/*hover*/
+.bg:hover span {
+  opacity: 1;
+}
+.bg2:hover span {
+  opacity: 1;
+}
