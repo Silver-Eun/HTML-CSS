@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        float: left;
+        margin: 10px;
+        width: 20%;
+      }
+      img:nth-child(1):hover {
+        filter: blur(4px);
+        /*블러효과(pxP - 값이 높을수록 효과가 큼*/
+      }
+      img:nth-child(2):hover {
+        filter: brightness(50%);
+        /*밝기조정(%) 0(dark)-100(default)-101(L)*/
+      }
+      img:nth-child(3):hover {
+        filter: contrast(200%);
+        /*대비조정(%) 0(dark)-100(default)-101(L)*/
+      }
+      img:nth-child(4):hover {
+        filter: grayscale(100%);
+        /*회색조(%) 0(시작값)-100 (흑백효과)*/
+      }
+      img:nth-child(5):hover {
+        filter: hue-rotate(280deg);
+        /*색조회전(deg) 0(시작값)-360 */
+      }
+      img:nth-child(6):hover {
+        filter: invert(100%);
+        /*색반전(%) 0(시작값)-100 (흰-검) / 밝기모드조정*/
+      }
+      img:nth-child(7):hover {
+        filter: saturate(200%);
+        /*채도변화(%) 0(▽)-100(default)-101(△)*/
+      }
+      img:nth-child(8):hover {
+        filter: sepia(100%);
+        /*세피아(%) 0(시작값))-100, 빈티지(컨셉)*/
+      }
+
+      /*다중효과 - 동시적용*/
+      img:nth-child(9):hover {
+        filter: blur(5px) grayscale(100%);
+      }
+
+      /* 필터를 제거 - none*/
+      img:nth-child(10):hover {
+        filter: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>filter</h1>
+    <p>: 사전에 다양한 이미지 변화효과를 부여, 블러나 그외의 동작을 함께 사용하여 스타일링을 줄 수 있는 함수!</p>
+
+    <figure>
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+      <img src="../HTML5+CSS3 디테일 심화/디테일 05~06강/Detail06/작업파일/img/bg2.png" alt="" ; />
+    </figure>
+  </body>
+</html>
