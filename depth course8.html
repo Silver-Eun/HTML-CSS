@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        transition: all ease-in 0.5s;
+      }
+      form {
+        width: 60%;
+        height: 50px;
+        margin: 150px auto;
+        text-align: center; /* input의 글자 성격을 중앙정렬*/
+      }
+      form::before {
+        content: "HTML";
+        font-size: 80px;
+        font-weight: 900;
+      }
+      input[type="search"] {
+        height: 50px;
+        width: 70%;
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        border-radius: 5px;
+        display: block; /*서식영역을 박스화*/
+        margin: auto;
+        /*서식에 배경이미지 표현*/
+        background: url("../HTML5+CSS3 디테일 심화/디테일 07~08강/Detail08/작업파일/img/search-solid.png") 2% no-repeat;
+        background-size: 13px;
+        padding-left: 30px;
+        outline: none; /*가장 바깥부분을 둘러싸고 있는 아웃라인 부분의 스타일을 설정*/
+      }
+
+      /*서식의 활성화 경우 : focus*/
+      input:focus {
+        /*background-color: azure;
+        border: 3px solid rgb(230, 139, 139);*/
+        box-shadow: 0px 0px 5px rgba(70, 67, 245, 0.397);
+        width: 100%;
+        background: none;
+        background-position: 2%;
+      }
+      footer {
+        width: 100%;
+        background: #000;
+        position: relative;
+        padding: 50px 0;
+        overflow: hidden;
+        bottom: 0;
+      }
+
+      select {
+        background: linear-gradient(to top, #000, #999);
+        color: #fff;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        border: 1px solid #999;
+        padding: 10px 7px;
+        border: none;
+      }
+      option {
+        background: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="search" name="sh" />
+    </form>
+
+    <footer>
+      <select>
+        <option>패밀리사이트1</option>
+        <option>패밀리사이트2</option>
+        <option>패밀리사이트3</option>
+      </select>
+    </footer>
+  </body>
+</html>
