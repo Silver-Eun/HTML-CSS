@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+nav {
+  width: 80%;
+  overflow: hidden;
+  height: 80px;
+  background-color: #1b2035;
+  margin: 50px auto;
+}
+
+/*ex1*/
+#nav1 {
+  text-align: center; /*글자중앙정렬*/
+}
+#nav1 > ul {
+  display: inline-block;
+}
+#nav1 > ul > li {
+  float: left;
+  padding: 0 30px;
+  line-height: 80px;
+}
+
+/*ex2*/
+#nav2 > a {
+  display: block; /*글자성격-inline*/
+  float: left;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 80px;
+}
+#nav2 > ul {
+  float: right;
+}
+#nav2 > ul > li {
+  float: left;
+  padding: 0 30px;
+  line-height: 80px;
+}
+
+/*ex3*/
+#nav3 {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+#nav3 > a {
+  line-height: 80px;
+  display: block;
+  font-size: 30px;
+  font-weight: 900;
+  position: absolute;
+  left: 30px;
+}
+
+#nav3 > select {
+  padding: 0 20px;
+  height: 30px;
+  background-color: #1b2035;
+  color: #fff;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-15px);
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+#nav3 > ul {
+  display: inline-block;
+}
+#nav3 > ul li {
+  float: left;
+  line-height: 80px;
+  padding: 0 30px;
+}
