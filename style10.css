@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+#main {
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(135deg, #f4f7fa 0%, #c3cfe2 100%);
+  overflow: hidden;
+  color: #50468b;
+  position: relative; /*부모기준 - 자식요소의 위치값을 위해*/
+}
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  font-size: 80px;
+  animation-name: text1; /*효과를 넣을 요소에 이름을  선언*/
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /*수치변형함수*/
+  animation-fill-mode: both;
+  /*애니메이션의 실해 전, 후에 요소의 스타일 적용방식
+  none - 아무것도 지정되지 않을때
+  forwards 100% 키프레임이 도달 > 마지막 유지
+  backwards 시작되지 전에 미리 적용(스타일이 적용되기 전)
+  both 둘다 적용 forwards+bakwards*/
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  font-size: 30px;
+  animation-name: text2;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: both;
+}
+
+.object {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c3cfe2 0%, #9895b6 100%);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(800px) scale(0.5);
+  animation-name: obj;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes text1 {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+@keyframes text2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+@keyframes obj {
+  0% {
+    opacity: 0;
+    transform: translateY(800px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(280px) scale(1);
+  }
+}
