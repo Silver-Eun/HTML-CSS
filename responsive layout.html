@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width+device-width, initial-scale=1.0" />
+    <title>반응형 기초</title>
+    <style>
+      #test {
+        background-color: aqua;
+      }
+
+      @media screen and (min-width: 1500px) {
+        /* 화면사이즈가 1500px 이상일 때  */
+        #test {
+          background-color: #a54242;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        /* 화면사이즈가 1024px 이하일 때 */
+        #test {
+          background-color: #fdd141;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--<meta name="viewport" content="width+device-width, initial-scale=1.0">
+            : 모든 기기에 폭을 맞춰 호환!
+            width=device-width > 페이지의 너비를 기기의 스크린 너비로 설정
+            initial-scale=1.0 > 처음 페이지 로딩시에 축소/확대가 되지 않는 원래의 정상 크기를
+            사용할 수 있도록 하는 설정(0 ~ 10)
+        -->
+    <div id="test">test</div>
+  </body>
+</html>
