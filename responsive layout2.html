@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width+device-width, initial-scale=1.0" />
+    <title>반응형을 위한 단위</title>
+    <link rel="stylesheet" href="style_2.css" />
+  </head>
+  <body>
+    <!--px: 고정값 / 화면사이즈에 따라 변화가 생길 레이아웃에는
+        부여할 시 유동적인 변화를 제한
+        <div class="px">고정값</div>-->
+
+    <!-- %: 비율 / 화면 사이즈에 따라 비율상 변화(가변) - 부모의 기준에 따라 비율 분배-->
+    <div class="pce">비율값</div>
+    <div class="pce">비율값</div>
+
+    <!--vh, vw : viewport height(vh) viewport width(vw) 
+          뷰포트, 즉 기기의 화면상 기준으로 폭을 지정하는 단위
+          화면상 비율을 얼만큼 채울 것인가를 결정
+          1vw = viewport 너비의 1%
+          1000px = 1vw(10px) "1000의 1%"
+        
+    <div class="vw">뷰포트 기준</div>-->
+
+    <!-- em, rem : 폰트를 위한 단위 / 기준(부모)으로 기점 = 1em, 1rem -->
+    <div id="all">
+      <div class="em">부모의 기준으로 기점 변화</div>
+      <div class="rem">최상단 부모의 기준으로 기점 변화</div>
+    </div>
+  </body>
+</html>
