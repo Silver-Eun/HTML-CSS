@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width+device-width, initial-scale=1.0" />
+    <title>flex_container(부모) 속성</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: #ff9486;
+        display: flex;
+        flex-direction: row;
+        /* 메인축 방향(가로축) > 통상적인 언어로
+        왼쪽 ~ 오른쪽 */
+        flex-direction: column; /* 수직축 변경 > 위 ~ 아래로 */
+        /* row/column 반대로 적용 가능 - reverse */
+      }
+      .item {
+        background-color: #529dff;
+        border: 1px solid #000;
+        margin: 5px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1) item에 대한 방향축을 설정 -->
+    <div class="container">
+      <div class="item">flex_AA</div>
+      <div class="item">flex_BB</div>
+      <div class="item">flex_CC</div>
+    </div>
+  </body>
+</html>

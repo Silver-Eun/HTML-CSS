@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width+device-width, initial-scale=1.0" />
+    <title>flex_container(부모) 속성</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: bisque;
+        display: flex;
+        flex-wrap: nowrap; /* 원래 한 줄의 성격! */
+        flex-wrap: wrap;
+        /* item의 줄을 바꿀 때 사용하게 됨
+        공간이 없을 경우 다음 줄로 이동 (역방향/반대로, reverse 가능) */
+        /* flex-flow : flex-direction + flex-wrap */
+      }
+      .item {
+        background-color: aquamarine;
+        border: 1px solid #000;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 2) flex-wrap : flex_container의 크기 기준 변동이
+    있을 경우 item들을 어떻게 보일지 결정
+    nowrap 기본값 (한줄1)
+    -->
+    <div class="container">
+      <div class="item">flex_AAAAAAAAAAAAAAAAAA</div>
+      <div class="item">flex_BBBBBBBBBBBBBBBBBB</div>
+      <div class="item">flex_CCCCCCCCCCCCCCCCCC</div>
+      <div class="item">flex_DDDDDDDDDDDDDDDDDD</div>
+      <div class="item">flex_EEEEEEEEEEEEEEEEEE</div>
+      <div class="item">flex_FFFFFFFFFFFFFFFFFF</div>
+    </div>
+  </body>
+</html>

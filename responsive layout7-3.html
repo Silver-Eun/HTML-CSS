@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width+device-width, initial-scale=1.0" />
+    <title>flex_container(부모) 속성 - 정렬</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        background-color: #ff9486;
+        display: flex;
+        flex-direction: row;
+
+        /* 메인축의 방향의 item을 정렬하는 방법을 지정 */
+        justify-content: flex-start; /* 기본값 */
+        justify-content: flex-end; /* 메인축을 끝점으로 이동 */
+        justify-content: center; /* 메인축을 중앙점으로 이동 */
+        justify-content: space-between;
+        /* 공간 전체를 활용하여 item을 배치 */
+        justify-content: space-around;
+        /* 공간 전체를 활용하여 item외곽으로 공간을 두고 배치 */
+      }
+      .container2 {
+        background-color: #ff9486;
+        display: flex;
+        height: 50vh;
+        /* 수직축상의 item을 정렬하는 방법/ 한줄일 때 사용 */
+        align-items: stretch; /* 높이를 꽉 채우며 표현 - 기본값 */
+        align-items: center; /* 중앙에 배치 - 많이 사용 */
+      }
+      .container3 {
+        background-color: #ff9486;
+        display: flex;
+        height: 50vh;
+        /* 수직축상 item을 정렬하는 방법 / 두 줄 이상 사용 */
+        width: 60vw;
+        flex-wrap: wrap;
+        align-content: stretch; /* 기본값
+        justify-content:(값동일) */
+      }
+      .item {
+        background-color: #529dff;
+        border: 1px solid #000;
+        margin: 5px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!--flex 정렬 표현(무슨축?)-->
+    <div class="container">
+      <div class="item">flex_AA</div>
+      <div class="item">flex_BB</div>
+      <div class="item">flex_CC</div>
+    </div>
+
+    <div class="container2">
+      <div class="item">flex_AA</div>
+      <div class="item">flex_BB</div>
+      <div class="item">flex_CC</div>
+    </div>
+
+    <div class="container3">
+      <div class="item">flex_AA</div>
+      <div class="item">flex_BB</div>
+      <div class="item">flex_CC</div>
+      <div class="item">flex_DD</div>
+      <div class="item">flex_EE</div>
+      <div class="item">flex_FF</div>
+    </div>
+  </body>
+</html>
