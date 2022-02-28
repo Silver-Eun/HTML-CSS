@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* 선의 값을 폭 안으로 표현 */
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+}
+body{
+    font-size: 18px;
+    color: #333;
+    background-color: #ecddcc;
+}
+
+.grid{
+    display: grid; /* 그리드 선언 > item 모두 그리드의 속성 표현이 가능한 요소 */
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #000;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+main .item:nth-child(1){
+    border-right: 1px solid #000;
+    background: url("HTML5+CSS3 반응형 레이아웃/Responsive_Web12/사용파일/bg.jpg") no-repeat center center;
+    background-size: 60%;
+    filter: grayscale(60%); /* 회색조가 들어가게 */
+}
+main .item:nth-child(2){
+    padding: 50px;
+    display: grid; /* 안쪽의 title 정렬 */
+}
+
+main .title{
+    align-self: end;
+}
+main button{
+    border: 1px solid #000;
+    padding: 12px;
+    background-color: #ecddcc;
+    margin-top: 20px;
+}
+#nav{
+    display: block; /* 글자인 성격을 박스로 변환 > 폭을 부여 */
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    border: 1px solid #000;
+}
+#nav span{
+    display: block;
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+}
+#nav span:nth-child(2){
+    margin: 31% 0; /* 35% */
+}
+
+/* section */
+section{
+    width: 100%;
+    height: 30vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+article:nth-child(1){
+    border-right: 1px solid #000;
+    padding: 50px;   
+}
+article:nth-child(1) .item{
+    align-self: end;
+}
+article:nth-child(2){
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+article:nth-child(2) .bg{
+    border-right: 1px solid #000;
+    background: url("HTML5+CSS3 반응형 레이아웃/Responsive_Web12/사용파일/bg2.jpg") no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+article:nth-child(2) .item:nth-child(2){
+    align-self: end;
+    padding: 50px;
+}
+
+footer{
+    width: 100%;
+    padding: 5vh 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+}
