@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/* font-family: 'Lilita One', cursive;
+font-family: 'Source Sans Pro', sans-serif; */
+
+
+*{padding: 0; margin: 0; box-sizing: border-box;font-family: 'Source Sans Pro', sans-serif;}
+a{text-decoration: none; color: inherit;}
+ul, li, ol{list-style: none;}
+img{display: block; max-width: 100%;}
+body{font-size: 18px; color: #333;}
+h1{font-family: 'Lilita One', cursive;}
+
+/* header */
+header{
+     width: 100%; 
+     height: 10vh; 
+     overflow: hidden; 
+     position: fixed; 
+     top: 0;
+     left: 0;
+ }
+ header>a{
+    display: block;
+    float: left;
+    font-size: 25px; 
+    font-weight: 800; 
+    line-height: 10vh; 
+    padding: 0 40px;
+}
+ header ul{
+     float: right;
+     display: flex; /*item>li (한줄로=row)*/
+     height: 10vh; 
+     align-items: center;
+ }
+ header li{
+     padding: 0 30px;
+     font-weight: 700;
+ }
+/* main */
+main{
+    width: 100%;
+    height: 80vh;
+    background: url("HTML5+CSS3 반응형 레이아웃/Responsive_Web13-14/사용파일/img/mainbg.png") no-repeat;
+    background-size: cover;
+    color: #2ba0ff;
+    font-size: 20px;
+    display: table; /* table 성격으로 변환 */
+}
+main .title{
+    display: table-cell; /* 칸의 성격으로 변환 */
+    vertical-align: middle;/* 수직상 내용물이 중앙정렬 */
+    text-align: center;
+    font-size: 16px;
+}
+main .title h1{
+    font-size: 80px;
+    margin-bottom: 30px;
+    line-height: 85px;
+}
+
+/* flex*/
+#flex{
+    width: 100%;
+    overflow: hidden;
+    padding: 15vh 0;
+    text-align: center;
+    font-size: 14px;
+}
+#flex h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+#flex article{
+    width: 63%;
+    margin: 50px auto;
+    margin-bottom: 0;
+    display: flex; /* flex 성격으로 변환 - 안쪽의 요소가 row~ */
+    flex-wrap: wrap; /* 넘치는 경우 자동으로 내려가게 표현 */
+}
+#flex .item{
+    flex: 1 1 20%;
+    margin: 10px;
+    background-color: #ffc1e0;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+/* grid */
+#grid{
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+#grid article:nth-child(1){
+    background: url("HTML5+CSS3 반응형 레이아웃/Responsive_Web13-14/사용파일/img/gridleftBg.png") no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-size: 80px;
+}
+#grid article:nth-child(1) p{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+#grid li{
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+#grid article:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+#grid .bg1{
+    background: url("HTML5+CSS3 반응형 레이아웃/Responsive_Web13-14/사용파일/img/gridrightBg_1.png") no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-size: 40px;
+    color: #fff;
+    display: grid;
+}
+#grid .bg1 button{
+    align-self: end;
+    width: 30%;
+    padding: 15px 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: none;
+}
+#grid .bg2{
+    background: url("HTML5+CSS3 반응형 레이아웃/Responsive_Web13-14/사용파일/img/gridrightBg_2.png") no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-size: 40px;
+    color: #ff71b8;
+    display: grid;
+    position: relative; /* 한단의 링크 아이콘을 밑으로 배치 */
+}
+#grid .bg2>div{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20%, auto));
+}
+#grid .bg2 a{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+#grid .gb2 i{
+    display: block;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+footer{
+    width: 100%;
+    padding: 6vh 0;
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+}
