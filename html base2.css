@@ -1,0 +1,15 @@
+/* div section {
+  background-color: blue;
+  margin: 10px;
+} */
+/* body > div {
+  background-color: yellow;
+}
+section {
+  color: red;
+} */
+body > div,
+body > section {
+  display: inline-block;
+  background-color: red;
+}
