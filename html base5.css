@@ -1,0 +1,8 @@
+section {
+  color: red;
+  text-align: center;
+}
+section div {
+  background-color: blue;
+  margin: 10px;
+}
