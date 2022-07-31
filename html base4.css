@@ -1,0 +1,15 @@
+div {
+  font-size: 50px;
+}
+section div {
+  color: red;
+}
+#a1 {
+  color: blue;
+  font-size: 200px;
+}
+
+.a2 {
+  color: gold;
+  background-color: black;
+}
