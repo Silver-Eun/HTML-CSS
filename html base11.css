@@ -1,0 +1,65 @@
+nav,
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/* Normalize */
+
+/* 1st Menu Item*/
+nav.top-menu > ul > li {
+  display: inline-block;
+}
+
+/* 1st Menu*/
+nav.top-menu > ul {
+  display: inline-block;
+}
+/*Sub Menu*/
+nav.top-menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* All sub Menu under 3rd Menu*/
+nav.top-menu ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+nav.top-menu li:hover > ul {
+  display: block;
+}
+
+nav.top-menu li {
+  position: relative;
+  background-color: #dfdfdf;
+}
+
+nav.top-menu li:hover {
+  background-color: black;
+  color: white;
+}
+
+nav.top-menu li:hover > a {
+  color: white;
+}
+
+/*Top Menu*/
+nav.top-menu {
+  text-align: center;
+}
+nav.top-menu a {
+  /* never break lines */
+  white-space: nowrap;
+  padding: 10px;
+  display: block;
+}
