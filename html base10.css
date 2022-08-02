@@ -1,0 +1,49 @@
+nav,
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/* Normalize */
+
+/* 1st Menu Item*/
+nav.top-menu > ul > li {
+  display: inline-block;
+  background-color: gold;
+}
+
+/* 1st Menu*/
+nav.top-menu > ul {
+  background-color: blue;
+  display: inline-block;
+}
+/*Sub Menu*/
+nav.top-menu ul ul {
+  top: 100%;
+  left: 0px;
+  position: absolute;
+  display: none;
+  background-color: pink;
+}
+
+nav.top-menu li:hover > ul {
+  display: block;
+}
+
+nav.top-menu li {
+  position: relative;
+}
+
+nav.top-menu {
+  text-align: center;
+}
+nav.top-menu a {
+  /* never break lines */
+  white-space: nowrap;
+}
