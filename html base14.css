@@ -1,0 +1,21 @@
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li::before {
+  content: "* ";
+}
+
+section::after {
+  content: "4";
+  background-color: red;
+  display: block;
+}
+
+section > * {
+  display: block;
+  background-color: red;
+}
