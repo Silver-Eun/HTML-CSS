@@ -1,0 +1,25 @@
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*Normalizing*/
+
+ul li {
+  float: left;
+  width: 25%;
+  background-color: blue;
+}
+
+section {
+  background-color: red;
+  display: block;
+  width: 30%;
+  float: left;
+}
