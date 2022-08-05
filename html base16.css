@@ -1,0 +1,40 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* All sub Menu including 2rd Menu */
+nav.top-menu ul ul {
+  display: none;
+}
+
+/* activated subMenu */
+nav.top-menu li:hover > ul {
+  display: block;
+}
+
+/* 1st Menu */
+nav.top-menu > ul {
+  background-color: blue;
+}
+
+/* 1st MenuItem */
+nav.top-menu > ul > li {
+  background-color: red;
+  display: block;
+  float: left;
+}
+
+/* add */
+nav.top-menu > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
