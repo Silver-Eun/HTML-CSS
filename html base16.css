@@ -10,9 +10,37 @@ a {
   text-decoration: none;
 }
 
+/* Menu Box */
+nav.top-menu {
+  text-align: center;
+}
+
+nav.top-menu li {
+  background-color: #dfdfdf;
+  position: relative;
+}
+
+/* activated subMenu */
+nav.top-menu li:hover {
+  background-color: black;
+}
+
+nav.top-menu li:hover > a {
+  color: white;
+}
+
 /* All sub Menu including 2rd Menu */
 nav.top-menu ul ul {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* 3rd sub Menu including 2rd Menu */
+nav.top-menu ul ul ul {
+  top: 0;
+  left: 100%;
 }
 
 /* activated subMenu */
@@ -22,12 +50,14 @@ nav.top-menu li:hover > ul {
 
 /* 1st Menu */
 nav.top-menu > ul {
-  background-color: blue;
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #dfdfdf;
+  border-radius: 5px;
 }
 
 /* 1st MenuItem */
 nav.top-menu > ul > li {
-  background-color: red;
   display: block;
   float: left;
 }
@@ -37,4 +67,11 @@ nav.top-menu > ul::after {
   content: "";
   display: block;
   clear: both;
+}
+
+/* Menu Item Text */
+nav.top-menu a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
 }
