@@ -1,0 +1,17 @@
+article > div {
+  height: 100px;
+  background-color: blue;
+  width: 15%;
+  display: block;
+  float: left;
+}
+
+article {
+  background-color: red;
+}
+
+article::after {
+  content: "";
+  clear: both;
+  display: block;
+}
