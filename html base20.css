@@ -1,0 +1,44 @@
+/* section {
+  max-width: 970px;
+  margin: 0 auto;
+  border: 10px solid gold;
+}
+
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+section div {
+  float: left;
+  height: 100px;
+  box-sizing: border-box;
+  width: 25%;
+  background-color: red;
+  border: 0 solid black;
+  border-width: 0 15px;
+}
+
+section div:last-child {
+  background-color: blue;
+}
+
+section article {
+  margin: 0px -15px;
+} */
+
+section.a {
+  width: 500px;
+  height: 500px;
+  border: 10px solid red;
+  margin: 0 auto;
+}
+
+section.a div {
+  display: block;
+  width: auto;
+  height: 80%;
+  background-color: gray;
+  margin: 0 -10px;
+}
