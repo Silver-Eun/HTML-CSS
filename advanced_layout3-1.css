@@ -1,0 +1,26 @@
+div.c {
+  position: relative;
+}
+div.c article {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+div.c > section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 200px);
+  height: 200px;
+  background-color: blue;
+}
+
+div.a {
+  height: 100px;
+  background-color: blue;
+}
+
+div.b {
+  height: 200px;
+  background-color: #0000cc;
+}/*# sourceMappingURL=advanced_layout3-1.css.map */

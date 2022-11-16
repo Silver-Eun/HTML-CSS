@@ -1,0 +1,160 @@
+/* libaray */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.row > .col {
+  float: left;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.row > .col.col-1-2 {
+  width: 50%;
+}
+
+.row > .col.col-2-2 {
+  width: 100%;
+}
+
+.row > .col.col-1-5 {
+  width: 20%;
+}
+
+.row > .col.col-2-5 {
+  width: 40%;
+}
+
+.row > .col.col-3-5 {
+  width: 60%;
+}
+
+.row > .col.col-4-5 {
+  width: 80%;
+}
+
+.row > .col.col-5-5 {
+  width: 100%;
+}
+
+.row > .col-1-24 {
+  width: 4.1666666667%;
+}
+
+.row > .col-2-24 {
+  width: 8.3333333333%;
+}
+
+.row > .col-3-24 {
+  width: 12.5%;
+}
+
+.row > .col-4-24 {
+  width: 16.6666666667%;
+}
+
+.row > .col-5-24 {
+  width: 20.8333333333%;
+}
+
+.row > .col-6-24 {
+  width: 25%;
+}
+
+.row > .col-7-24 {
+  width: 29.1666666667%;
+}
+
+.row > .col-8-24 {
+  width: 33.3333333333%;
+}
+
+.row > .col-9-24 {
+  width: 37.5%;
+}
+
+.row > .col-10-24 {
+  width: 41.6666666667%;
+}
+
+.row > .col-11-24 {
+  width: 45.8333333333%;
+}
+
+.row > .col-12-24 {
+  width: 50%;
+}
+
+.row > .col-13-24 {
+  width: 54.1666666667%;
+}
+
+.row > .col-14-24 {
+  width: 58.3333333333%;
+}
+
+.row > .col-15-24 {
+  width: 62.5%;
+}
+
+.row > .col-16-24 {
+  width: 66.6666666667%;
+}
+
+.row > .col-17-24 {
+  width: 70.8333333333%;
+}
+
+.row > .col-18-24 {
+  width: 75%;
+}
+
+.row > .col-19-24 {
+  width: 79.1666666667%;
+}
+
+.row > .col-20-24 {
+  width: 83.3333333333%;
+}
+
+.row > .col-21-24 {
+  width: 87.5%;
+}
+
+.row > .col-22-24 {
+  width: 91.6666666667%;
+}
+
+.row > .col-23-24 {
+  width: 95.8333333333%;
+}
+
+.row > .col-24-24 {
+  width: 100%;
+}
+
+/* library validation code */
+.container.myc {
+  min-height: 100px;
+  background-color: red;
+}
+
+.container.myc .row > .col::after {
+  content: "";
+  display: block;
+  clear: both;
+  min-height: 200px;
+  background-color: gold;
+}/*# sourceMappingURL=advanced_layout3.css.map */

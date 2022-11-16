@@ -1,0 +1,80 @@
+/* libaray */
+
+$col-spacing: 10px;
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 (-$col-spacing/2);
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.row > .col {
+  float: left;
+  width: 100%;
+  padding: 0 ($col-spacing/2);
+  box-sizing: border-box;
+}
+
+.row > .col.col-1-2 {
+  width: 50%;
+}
+.row > .col.col-2-2 {
+  width: 100%;
+}
+
+.row > .col.col-1-5 {
+  width: 20%;
+}
+.row > .col.col-2-5 {
+  width: 40%;
+}
+.row > .col.col-3-5 {
+  width: 60%;
+}
+.row > .col.col-4-5 {
+  width: 80%;
+}
+.row > .col.col-5-5 {
+  width: 100%;
+}
+
+// $max: 24;
+
+// @for $i from 1 through $max {
+//   .row > .col-#{$i}-#{$max} {
+//     width: percentage($i/$max);
+//   }
+// }
+
+$maxGrid: 24;
+
+@for $max from 1 through $maxGrid {
+  @for $j from 1 through $max {
+    .row > .col-#{$i}-#{$max} {
+      width: percentage($i/$max);
+    }
+  }
+}
+
+/* library validation code */
+.container.myc {
+  min-height: 100px;
+  background-color: red;
+}
+
+.container.myc .row > .col::after {
+  content: "";
+  display: block;
+  clear: both;
+  min-height: 200px;
+  background-color: gold;
+}
