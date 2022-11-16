@@ -1,0 +1,564 @@
+section div {
+  background-color: blue;
+  height: 100px;
+}
+
+section div:nth-child(1) {
+  background-color: AliceBlue;
+}
+
+section div:nth-child(2) {
+  background-color: AntiqueWhite ;
+}
+
+section div:nth-child(3) {
+  background-color: Aqua;
+}
+
+section div:nth-child(4) {
+  background-color: Aquamarine;
+}
+
+section div:nth-child(5) {
+  background-color: Azure;
+}
+
+section div:nth-child(6) {
+  background-color: Beige;
+}
+
+section div:nth-child(7) {
+  background-color: Bisque;
+}
+
+section div:nth-child(8) {
+  background-color: Black;
+}
+
+section div:nth-child(9) {
+  background-color: BlanchedAlmond;
+}
+
+section div:nth-child(10) {
+  background-color: Blue;
+}
+
+section div:nth-child(11) {
+  background-color: BlueViolet;
+}
+
+section div:nth-child(12) {
+  background-color: Brown;
+}
+
+section div:nth-child(13) {
+  background-color: BurlyWood;
+}
+
+section div:nth-child(14) {
+  background-color: CadetBlue  ;
+}
+
+section div:nth-child(15) {
+  background-color: Chartreuse;
+}
+
+section div:nth-child(16) {
+  background-color: Chocolate;
+}
+
+section div:nth-child(17) {
+  background-color: Coral;
+}
+
+section div:nth-child(18) {
+  background-color: CornflowerBlue;
+}
+
+section div:nth-child(19) {
+  background-color: Cornsilk;
+}
+
+section div:nth-child(20) {
+  background-color: Crimson;
+}
+
+section div:nth-child(21) {
+  background-color: Cyan;
+}
+
+section div:nth-child(22) {
+  background-color: DarkBlue;
+}
+
+section div:nth-child(23) {
+  background-color: DarkCyan;
+}
+
+section div:nth-child(24) {
+  background-color: DarkGoldenRod;
+}
+
+section div:nth-child(25) {
+  background-color: DarkGray;
+}
+
+section div:nth-child(26) {
+  background-color: DarkGreen;
+}
+
+section div:nth-child(27) {
+  background-color: DarkKhaki;
+}
+
+section div:nth-child(28) {
+  background-color: DarkMagenta;
+}
+
+section div:nth-child(29) {
+  background-color: DarkOliveGreen;
+}
+
+section div:nth-child(30) {
+  background-color: Darkorange;
+}
+
+section div:nth-child(31) {
+  background-color: DarkOrchid;
+}
+
+section div:nth-child(32) {
+  background-color: DarkRed;
+}
+
+section div:nth-child(33) {
+  background-color: DarkSalmon;
+}
+
+section div:nth-child(34) {
+  background-color: DarkSeaGreen;
+}
+
+section div:nth-child(35) {
+  background-color: DarkSlateBlue;
+}
+
+section div:nth-child(36) {
+  background-color: DarkSlateGray;
+}
+
+section div:nth-child(37) {
+  background-color: DarkTurquoise;
+}
+
+section div:nth-child(38) {
+  background-color: DarkViolet;
+}
+
+section div:nth-child(39) {
+  background-color: DeepPink;
+}
+
+section div:nth-child(40) {
+  background-color: DeepSkyBlue;
+}
+
+section div:nth-child(41) {
+  background-color: DimGray;
+}
+
+section div:nth-child(42) {
+  background-color: DodgerBlue;
+}
+
+section div:nth-child(43) {
+  background-color: FireBrick;
+}
+
+section div:nth-child(44) {
+  background-color: FloralWhite;
+}
+
+section div:nth-child(45) {
+  background-color: ForestGreen;
+}
+
+section div:nth-child(46) {
+  background-color: Fuchsia;
+}
+
+section div:nth-child(47) {
+  background-color: Gainsboro;
+}
+
+section div:nth-child(48) {
+  background-color: GhostWhite;
+}
+
+section div:nth-child(49) {
+  background-color: Gold;
+}
+
+section div:nth-child(50) {
+  background-color: GoldenRod;
+}
+
+section div:nth-child(51) {
+  background-color: Gray;
+}
+
+section div:nth-child(52) {
+  background-color: Green;
+}
+
+section div:nth-child(53) {
+  background-color: GreenYellow;
+}
+
+section div:nth-child(54) {
+  background-color: HoneyDew;
+}
+
+section div:nth-child(55) {
+  background-color: HotPink;
+}
+
+section div:nth-child(56) {
+  background-color: IndianRed;
+}
+
+section div:nth-child(57) {
+  background-color: Indigo;
+}
+
+section div:nth-child(58) {
+  background-color: Ivory;
+}
+
+section div:nth-child(59) {
+  background-color: Khaki;
+}
+
+section div:nth-child(60) {
+  background-color: Lavender;
+}
+
+section div:nth-child(61) {
+  background-color: LavenderBlush;
+}
+
+section div:nth-child(62) {
+  background-color: LawnGreen;
+}
+
+section div:nth-child(63) {
+  background-color: LemonChiffon;
+}
+
+section div:nth-child(64) {
+  background-color: LightBlue;
+}
+
+section div:nth-child(65) {
+  background-color: LightCoral;
+}
+
+section div:nth-child(66) {
+  background-color: LightCyan;
+}
+
+section div:nth-child(67) {
+  background-color: LightGoldenRodYellow;
+}
+
+section div:nth-child(68) {
+  background-color: LightGray;
+}
+
+section div:nth-child(69) {
+  background-color: LightGreen;
+}
+
+section div:nth-child(70) {
+  background-color: LightPink;
+}
+
+section div:nth-child(71) {
+  background-color: LightSalmon;
+}
+
+section div:nth-child(72) {
+  background-color: LightSeaGreen ;
+}
+
+section div:nth-child(73) {
+  background-color: LightSkyBlue;
+}
+
+section div:nth-child(74) {
+  background-color: LightSlateGray;
+}
+
+section div:nth-child(75) {
+  background-color: LightSteelBlue ;
+}
+
+section div:nth-child(76) {
+  background-color: LightYellow;
+}
+
+section div:nth-child(77) {
+  background-color: Lime;
+}
+
+section div:nth-child(78) {
+  background-color: LimeGreen;
+}
+
+section div:nth-child(79) {
+  background-color: Linen;
+}
+
+section div:nth-child(80) {
+  background-color: Magenta;
+}
+
+section div:nth-child(81) {
+  background-color: Maroon;
+}
+
+section div:nth-child(82) {
+  background-color: MediumAquaMarine;
+}
+
+section div:nth-child(83) {
+  background-color: MediumBlue;
+}
+
+section div:nth-child(84) {
+  background-color: MediumOrchid;
+}
+
+section div:nth-child(85) {
+  background-color: MediumPurple;
+}
+
+section div:nth-child(86) {
+  background-color: MediumSeaGreen;
+}
+
+section div:nth-child(87) {
+  background-color: MediumSlateBlue;
+}
+
+section div:nth-child(88) {
+  background-color: MediumSpringGreen;
+}
+
+section div:nth-child(89) {
+  background-color: MediumTurquoise;
+}
+
+section div:nth-child(90) {
+  background-color: MediumVioletRed;
+}
+
+section div:nth-child(91) {
+  background-color: MidnightBlue;
+}
+
+section div:nth-child(92) {
+  background-color: MintCream ;
+}
+
+section div:nth-child(93) {
+  background-color: MistyRose ;
+}
+
+section div:nth-child(94) {
+  background-color: Moccasin;
+}
+
+section div:nth-child(95) {
+  background-color: NavajoWhite;
+}
+
+section div:nth-child(96) {
+  background-color: Navy;
+}
+
+section div:nth-child(97) {
+  background-color: OldLace;
+}
+
+section div:nth-child(98) {
+  background-color: Olive;
+}
+
+section div:nth-child(99) {
+  background-color: OliveDrab;
+}
+
+section div:nth-child(100) {
+  background-color: Orange;
+}
+
+section div:nth-child(101) {
+  background-color: OrangeRed;
+}
+
+section div:nth-child(102) {
+  background-color: Orchid;
+}
+
+section div:nth-child(103) {
+  background-color: PaleGoldenRod;
+}
+
+section div:nth-child(104) {
+  background-color: PaleGreen;
+}
+
+section div:nth-child(105) {
+  background-color: PaleTurquoise;
+}
+
+section div:nth-child(106) {
+  background-color: PaleVioletRed;
+}
+
+section div:nth-child(107) {
+  background-color: PapayaWhip;
+}
+
+section div:nth-child(108) {
+  background-color: PeachPuff;
+}
+
+section div:nth-child(109) {
+  background-color: Peru;
+}
+
+section div:nth-child(110) {
+  background-color: Pink;
+}
+
+section div:nth-child(111) {
+  background-color: Plum;
+}
+
+section div:nth-child(112) {
+  background-color: PowderBlue;
+}
+
+section div:nth-child(113) {
+  background-color: Purple;
+}
+
+section div:nth-child(114) {
+  background-color: Red;
+}
+
+section div:nth-child(115) {
+  background-color: RosyBrown;
+}
+
+section div:nth-child(116) {
+  background-color: RoyalBlue;
+}
+
+section div:nth-child(117) {
+  background-color: SaddleBrown;
+}
+
+section div:nth-child(118) {
+  background-color: Salmon;
+}
+
+section div:nth-child(119) {
+  background-color: SandyBrown;
+}
+
+section div:nth-child(120) {
+  background-color: SeaGreen;
+}
+
+section div:nth-child(121) {
+  background-color: SeaShell;
+}
+
+section div:nth-child(122) {
+  background-color: Sienna;
+}
+
+section div:nth-child(123) {
+  background-color: Silver ;
+}
+
+section div:nth-child(124) {
+  background-color: SkyBlue;
+}
+
+section div:nth-child(125) {
+  background-color: SlateBlue;
+}
+
+section div:nth-child(126) {
+  background-color: SlateGray;
+}
+
+section div:nth-child(127) {
+  background-color: Snow;
+}
+
+section div:nth-child(128) {
+  background-color: SpringGreen;
+}
+
+section div:nth-child(129) {
+  background-color: SteelBlue;
+}
+
+section div:nth-child(130) {
+  background-color: Tan;
+}
+
+section div:nth-child(131) {
+  background-color: Teal;
+}
+
+section div:nth-child(132) {
+  background-color: Thistle ;
+}
+
+section div:nth-child(133) {
+  background-color: Tomato;
+}
+
+section div:nth-child(134) {
+  background-color: Turquoise;
+}
+
+section div:nth-child(135) {
+  background-color: Violet ;
+}
+
+section div:nth-child(136) {
+  background-color: Wheat ;
+}
+
+section div:nth-child(137) {
+  background-color: White ;
+}
+
+section div:nth-child(138) {
+  background-color: WhiteSmoke;
+}
+
+section div:nth-child(139) {
+  background-color: Yellow;
+}
+
+section div:nth-child(140) {
+  background-color: YellowGreen ;
+}/*# sourceMappingURL=advanced_layout2.css.map */
