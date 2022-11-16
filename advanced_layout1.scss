@@ -1,0 +1,35 @@
+$x: 300px;
+
+section {
+  height: $x;
+
+  &:hover {
+    border-color: blue;
+  }
+  &:nth-of-type(1) {
+    border-color: gold;
+  }
+  border: 10px solid green;
+
+  div {
+    border: 10px solid red;
+    margin: 10px;
+
+    span {
+      display: inline-block;
+      width: 30%;
+      height: 50px;
+      background-color: green;
+      margin: 10px;
+    }
+  }
+
+  & > div {
+    background-color: yellow;
+  }
+}
+
+.b {
+  border: 10px solid green;
+  height: $x * 2;
+}
