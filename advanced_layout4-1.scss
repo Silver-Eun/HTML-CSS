@@ -1,0 +1,7 @@
+.ej-row > .ej-col::after {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-bottom: 15px;
+  background-color: green;
+}

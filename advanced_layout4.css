@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import "https://sj.oa.gg/lib/ej_v2.css";
+body div.ej-row {
+  color: white;
+}
+
+div.ej-row > div.ej-col::after {
+  content: "";
+  display: block;
+  height: 100px;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+div.ej-row:nth-child(1) > div.ej-col::after {
+  content: "여백이 시사각각 바뀝니다.";
+}
+
+div.ej-row:nth-child(2) > div.ej-col::after {
+  content: "여백이 시사각각 바뀝니다.";
+}
+
+div.ej-row:nth-child(3) > div.ej-col::after {
+  content: "이 줄만 여백이 특이하게 바뀝니다.";
+}
+
+div.ej-row:nth-child(4) > div.ej-col::after {
+  content: "이 줄은 특정 상황에서 줄바꿈 됩니다.";
+}
+
+div.ej-row:nth-child(5) > div.ej-col::after {
+  content: "1/6 => 1/4 => 1/2 => 1/1";
+}
+
+div.ej-row:last-child > div.ej-col::after {
+  display: none;
+}/*# sourceMappingURL=advanced_layout4.css.map */
