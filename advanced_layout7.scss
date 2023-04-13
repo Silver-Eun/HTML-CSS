@@ -1,0 +1,141 @@
+/* loading font */
+@import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+/* applying font */
+body {
+  font-family: "Jeju Gothic", serif;
+}
+
+/* Normalize*/
+/* loading normalize library */
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css";
+
+/* cusyom library */
+body,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* Normalize */
+
+nav.top-menu {
+  position: relative;
+  $second-menu-height: 240px;
+
+  text-align: center;
+  /* 1st menu */
+  & > ul {
+    display: inline-block;
+    /* activated 2nd menu*/
+    &:hover > li > ul {
+      display: block;
+    }
+    a {
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    /* 1st menu item */
+    & > li {
+      position: relative;
+      float: left;
+
+      & > a {
+        padding: 10px 70px;
+        padding-top: 13px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+
+        @media (max-width: 1200px) {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+      }
+    }
+
+    /* 2nd menu */
+    & > li > ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      height: $second-menu-height;
+      left: 0;
+      z-index: 2;
+
+      &:hover {
+        background-color: darkorange;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.5px;
+        width: 1px;
+        height: 100%;
+        background-color: red;
+      }
+
+      & > li > a {
+        padding: 10px 0;
+      }
+
+      &:hover > li > a {
+        color: white;
+        text-decoration: underline;
+        padding: 10px 0;
+      }
+
+      & > li:hover > a {
+        text-decoration: underline;
+      }
+    }
+
+    & > li:first-child > ul {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  /* 2nd menu background*/
+  .second-menu-background {
+    width: 100%;
+    height: $second-menu-height;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    transform: translateY(-5px);
+  }
+
+  & > ul:hover + .second-menu-background {
+    display: block;
+    z-index: 1;
+  }
+}
+
+div.contents {
+  background-color: gray;
+  min-height: 1000px;
+}
