@@ -1,0 +1,301 @@
+.ej-row > .ej-col::after {
+  content: "";
+  display: block;
+  height: 100px;
+  background-color: blue;
+}
+
+// 기본 콘테이너 최대 너비
+$ej-container-max-width-px: 980px;
+// 한줄에 들어갈 수 있는 그리드의 최대 개수
+$ej-col-max-no: 24;
+// 화면 1000 부터 300 까지 25px 간격으로 반응형 숨김 클래스 만들기
+$ej-hidden-below-max-width: 500;
+$ej-hidden-below-interval-width: 50;
+// 칼럼의 최대 간격
+// 50으로 하면 0부터 50
+$ej-spacing-max-width: 30;
+$ej-spacing-interval-width: 1;
+// 가로세로 비율에서 세로의 최대 비율
+// 가로는 늘 100이고 세로는 40 ~ 250
+
+$ej-ratio-max-percent_no: 250;
+$ej-ratio-interval-percent_no: 5;
+
+$ej-ratio-avobe-min-width: 300;
+$ej-ratio-avobe-max-width: 800;
+$ej-ratio-avobe-interval-width: 10;
+
+// 화면 대역~
+$band-infos: (
+  "w1": (
+    "width": 767,
+  ),
+  "w2": (
+    "width": 991,
+  ),
+  "w3": (
+    "width": 1199,
+  ),
+  "w4": (
+    "width": 1399,
+  ),
+  "w5": (),
+);
+
+// 여기서 부터 생성기!!
+$band-codes: map-keys($band-infos);
+
+$smallest-band-code: nth($band-codes, 1);
+$biggest-band-code: nth($band-codes, length($band-codes));
+
+@function getMapCounts($map) {
+  $count: length(map-values($amp));
+
+  @return $count;
+}
+
+.ej-container {
+  max-width: $ej-container-max-width-px;
+  margin: 0 auto;
+}
+
+// .ej-container-fluid {
+// }
+
+.ej-row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ej-row > .ej-col {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@function initBandInfos($band-infos) {
+  $min-width: 0;
+
+  @each $row in $band-infos {
+    $band-code: nth($row, 1);
+    $band-info: nth($row, 2);
+
+    $width: map-get($band-info, "width");
+
+    $band-info: map-merge(
+      $band-info,
+      (
+        "min-width": $min-width,
+      )
+    );
+
+    @if ($width == null) {
+      $min-width: 0;
+      $band-info: map-merge(
+        $band-info,
+        (
+          "width": $min-width,
+        )
+      );
+    } @else {
+      $min-width: $width + 1;
+    }
+
+    $band-infos: map-merge(
+      $band-infos,
+      (
+        $band-code: $band-info,
+      )
+    );
+  }
+
+  @return $band-infos;
+}
+
+$band-infos: initBandInfos($band-infos);
+
+@function getBandInfoByCode($band-code) {
+  $row: map-get($band-infos, $band-code);
+
+  @return $row;
+}
+
+@function getBandMinWidth($band-code) {
+  $band-info: getBandInfoByCode($band-code);
+
+  @return map-get($band-info, "min-width");
+}
+
+@function getBandMaxWidth($band-code) {
+  $band-info: getBandInfoByCode($band-code);
+
+  @return map-get($band-info, "width");
+}
+
+@mixin makeResCols($band-code, $i) {
+  $min-width: getBandMinWidth($band-code);
+  $min-width-px: $min-width * 1px;
+
+  @if ($min-width == 0) {
+    @include makeCols($band-code, $i);
+  } @else {
+    @media (min-width: $min-width-px) {
+      @include makeCols($band-code, $i);
+    }
+  }
+}
+
+@mixin makeResSpacing($band-code, $i) {
+  $min-width: getBandMinWidth($band-code);
+  $min-width-px: $min-width * 1px;
+
+  @if ($min-width == 0) {
+    @include makeSpacing($band-code, $i);
+  } @else {
+    @media (min-width: $min-width-px) {
+      @include makeSpacing($band-code, $i);
+    }
+  }
+}
+
+@mixin makeSpacing($band-code, $i) {
+  $padding-hor-px: $i / 2 * 1px;
+  $margin-hor-px: $padding-hor-px * -1;
+  .ej-spacing-#{$band-code}-#{$i} {
+    & > .ej-row {
+      margin-left: $margin-hor-px;
+      margin-right: $margin-hor-px;
+      & > .ej-col {
+        padding-left: $padding-hor-px;
+        padding-right: $padding-hor-px;
+      }
+    }
+  }
+
+  div.ej-spacing-#{$band-code}-#{$i}.ej-row {
+    margin-left: $margin-hor-px;
+    margin-right: $margin-hor-px;
+    & > .ej-col {
+      padding-left: $padding-hor-px;
+      padding-right: $padding-hor-px;
+    }
+  }
+}
+
+@mixin makeCols($band-code, $i) {
+  @for $j from 1 to $i + 1 {
+    &.ej-#{$band-code}-#{$j}-#{$i} {
+      width: percentage($j/$i);
+    }
+  }
+}
+
+@for $ii from $ej-ratio-avobe-min-width to $ej-ratio-avobe-max-width + 1 {
+  @if ($ii % $ej-ratio-avobe-interval-width == 0) {
+    @for $i from 0 to $ej-ratio-max-percent_no + 1 {
+      $min-width-px: $ii * 1px;
+      $height: $i;
+
+      @if ($i % $ej-ratio-interval-percent_no == 0) {
+        @if ($ej-ratio-avobe-min-width == $ii) {
+          .ej-ratio-100-#{$height} {
+            position: relative;
+            padding-bottom: percentage($height/100) !important;
+            height: auto !important;
+          }
+        } @else {
+          @media (min-width: $min-width-px) {
+            .ej-ratio-avobe-#{$ii}-100-#{$height} {
+              position: relative;
+              padding-bottom: percentage($height/100) !important;
+              height: auto !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $row in $band-codes {
+  $band-code: nth($row, 1);
+  $band-min-width: getBandMinWidth($band-code);
+  $band-min-width-px: $band-min-width * 1px;
+  $band-max-width: getBandMaxWidth($band-code);
+  $band-max-width-px: $band-max-width * 1px;
+
+  .ej-row {
+    .ej-col {
+      @for $i from 1 to $ej-col-max-no + 1 {
+        @include makeResCols($band-code, $i);
+      }
+    }
+  }
+
+  @for $i from 0 to $ej-spacing-max-width + 1 {
+    @if ($i % $ej-spacing-interval-width == 0) {
+      @include makeResSpacing($band-code, $i);
+    }
+  }
+
+  @for $i from 0 to $ej-ratio-max-percent_no + 1 {
+    $height: $i;
+
+    @if ($i % $ej-ratio-interval-percent_no == 0) {
+      @if ($band-min-width-px != 0) {
+        @media (min-width: $band-min-width-px) {
+          .ej-ratio-#{$band-code}-100-#{$height} {
+            position: relative;
+            height: auto !important;
+            padding-bottom: percentage($height/100) !important;
+          }
+        }
+      }
+    }
+  }
+
+  @if ($band-max-width-px == 0px) {
+    .ej-hidden-below-#{$band-code} {
+      display: none;
+    }
+
+    .ej-clear-both-below-#{$band-code} {
+      clear: both;
+    }
+  } @else {
+    @media (max-width: $band-max-width-px) {
+      .ej-hidden-below-#{$band-code} {
+        display: none;
+      }
+    }
+
+    @media (max-width: $band-max-width-px) {
+      .ej-clear-both-below-#{$band-code} {
+        clear: both;
+      }
+    }
+  }
+}
+
+// @for $i from 300 to $ej-hidden-below-max-width + 1 {
+//   @if ($i % $ej-hidden-below-interval-width == 0) {
+//     $width: $i;
+//     $width-px: $width * 1px;
+
+//     @media (max-width: $width-px - 1px) {
+//       .ej-hidden-below-#{$i} {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+.ej-ratio-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
