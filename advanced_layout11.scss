@@ -1,0 +1,25 @@
+$sm-min-width: 800px;
+
+.top-product-list {
+  .ej-col > div {
+    div.img {
+      position: relative;
+      background-color: green;
+
+      @media (min-width: $sm-min-width) {
+        padding-bottom: 120% !important;
+      }
+
+      div.bottom-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
