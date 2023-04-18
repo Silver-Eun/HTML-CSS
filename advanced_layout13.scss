@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  // vertical alignment per cell
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+div.item {
+  background-color: gold;
+}
