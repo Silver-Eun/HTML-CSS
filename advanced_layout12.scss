@@ -1,0 +1,25 @@
+div.contents {
+  height: 500px;
+  display: flex;
+  background-color: blue;
+
+  flex-direction: row;
+
+  // flex-basis : row → width, column → height
+  // flex-grow : ratio
+  //flex - shrink : shrink item. 0 - flase. 1 - true
+
+  .item {
+    background-color: red;
+    margin: 10px;
+
+    &:nth-child(2) {
+      flex-shrink: 4;
+      flex-basis: 200px;
+    }
+    &:nth-child(3) {
+      flex-shrink: 1;
+      flex-basis: 200px;
+    }
+  }
+}

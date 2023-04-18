@@ -1,0 +1,18 @@
+div.contents {
+  height: 500px;
+  display: flex;
+  background-color: blue;
+  flex-direction: row;
+}
+div.contents .item {
+  background-color: red;
+  margin: 10px;
+}
+div.contents .item:nth-child(2) {
+  flex-shrink: 4;
+  flex-basis: 200px;
+}
+div.contents .item:nth-child(3) {
+  flex-shrink: 1;
+  flex-basis: 200px;
+}/*# sourceMappingURL=advanced_layout12.css.map */
