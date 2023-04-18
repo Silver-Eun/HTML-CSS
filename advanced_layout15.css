@@ -1,0 +1,29 @@
+@media (min-width: 992px) {
+  .part1 {
+    position: relative;
+  }
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  .part1 > .row {
+    position: relative;
+  }
+}
+.part1 > .row > .col img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) and (min-width: 576px) {
+  .part1 > .row > .col:last-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .part1 > .row > .col.col-custom-1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}/*# sourceMappingURL=advanced_layout15.css.map */

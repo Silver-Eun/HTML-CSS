@@ -1,0 +1,38 @@
+.part1 {
+  @media (min-width: 992px) {
+    position: relative;
+  }
+
+  & > .row {
+    //over lg
+    @media (max-width: 991px) and (min-width: 576px) {
+      position: relative;
+    }
+
+    & > .col {
+      img {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      //sm ~ md
+      @media (max-width: 991px) and (min-width: 576px) {
+        &:last-child {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      // over lg
+      @media (min-width: 992px) {
+        &.col-custom-1 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
