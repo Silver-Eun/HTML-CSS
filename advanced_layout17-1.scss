@@ -1,0 +1,30 @@
+form {
+  div.control {
+    & > * {
+      float: left;
+    }
+
+    & > label {
+      width: 100px;
+    }
+
+    & > div {
+      width: calc(100% - 100px);
+
+      & > input {
+        width: 100%;
+        max-width: 200px;
+      }
+
+      @media (max-width: 500px) {
+        width: auto;
+      }
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+form div.control > * {
+  float: left;
+}
+form div.control > label {
+  width: 100px;
+}
+form div.control > div {
+  width: calc(100% - 100px);
+}
+form div.control > div > input {
+  width: 100%;
+  max-width: 200px;
+}
+@media (max-width: 500px) {
+  form div.control > div {
+    width: auto;
+  }
+}
+form div.control::after {
+  content: "";
+  clear: both;
+  display: block;
+}/*# sourceMappingURL=advanced_layout17-1.css.map */
