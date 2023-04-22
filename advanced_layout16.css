@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(#de3a64, #2a2f4b);
+  background-position: center;
+  background-position: 0 0;
+  transition: all 1s;
+}
+
+body:hover {
+  background-position: 100 100;
+  background-image: linear-gradient(#384294, #2a2f4b);
+}
